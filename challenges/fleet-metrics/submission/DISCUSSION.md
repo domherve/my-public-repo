@@ -33,9 +33,9 @@ The list of devices to monitor is preloaded from a csv file, and remains static 
 
 Since I am new to Go, and this was a relatively simple and self-contained project, I decided to make extensive use of AI coding tools, mostly Claude Code. This was both as an experiment, and also as a way to learn the idioms in Go (eg how to structure a standard project, write unit tests, make good use of the available libs, and properly use common patterns). This proved successful.
 
-I first used to the desktop application to present the problem, explain the requirements as I understood them and with my ideas on how to solve the problem and structure the solution at a high level. As such, I chose NOT to copy the instructions provided werbatim. After a few iterations, the AI and I converged on a plan, which resulted on a [prompt](./claude-code-prompt.md) that I could feed to Claude code (CLI).
+I first used to the Claude desktop application to present the problem, explain the requirements as I understood them and with my ideas on how to solve it and structure the solution at a high level. As such, I chose NOT to copy the instructions provided werbatim. After a few iterations, the AI and I converged on a plan, which resulted on a [prompt](./claude-code-prompt.md) that I could feed to Claude code (CLI).
 
-The analysis of the problem and interaction with Claude desktop took about 30 min. The initial implementation took 5-6 min of "thinking" by the model. There were mistakes, and between the rework done by the model and manually, I spent an overall time of 2 to 2.5 hours to get a working implementation (including the time to become familiar withthe go toolchain), and then some more time to review and inspect the generated code.
+The analysis of the problem and interaction with Claude desktop took about 30 min. The initial implementation by Claude code took 5-6 min of "thinking" by the model. There were mistakes, and between the rework done by the model and manually, I spent an overall time of 2 to 2.5 hours to get a working implementation (including the time to become familiar with the go toolchain), and then some more time to review and inspect the generated code.
 
 Note: For authenticity, this document was *NOT* generated with AI :)
 
