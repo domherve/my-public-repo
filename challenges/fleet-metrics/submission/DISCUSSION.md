@@ -64,22 +64,19 @@ It would be natural to expand the set of metrics collected for a given device. E
 
 In this case, if a number of such statistics is anticipated, it could be better to enhance the model to store a more dynamic list of metrics for each device, instead of adding more fields to the device record for each new statistic. Since the values to report (eg min, max, avg, count, etc) are similar for one statistics to the next, we should think of a generic structure that can be used for any metric. Since this problem is well understood, inpiration could be taken from systems like Prometheus, and even add more interesting features like histograms.
 
-
 ### Deployment, scaling and state sharing
 
 Currently, the implementation stores the metrics in memory, and there is only one instance of the program running. In order to scale the solution, we would need to be able to deploy multiple instances, and use a database to share the state across them (i.e. metrics for the devices).
 
 In this case we could easily containerize the application, deploy on Kubernetes, or use a cloud provided service (e.g. AWS ECS, or its equivalent on other platforms + API Gateway) and use an in-memory DB (eg Redis, MemCached or alternatives) to share the state.
 
-
-### Authetication/authorization and security
+### Authentication/authorization and security
 
 To take this to production we would need to add authentication. At the minimum use mTLS to secure communication between the devices and the service, and potentially use JWT for finer grained authorization, for example if the devices need to communicate with different services for different purposes.
 
 The implementation should also be reviewed to protect against vulnerabilities, for example to protect against large message, and  make sure all input is validated.
 
-In terms of deployment, the necessary measures only API gateway, vs Web Application Firewall) would depend where devices are deployed, if they communicate directly with the service, and how the service is deployed.
-
+In terms of deployment, the necessary measures (only API gateway, vs Web Application Firewall + gateway) would depend where devices are deployed, if they communicate directly with the service, and how/where the service is deployed.
 
 ### Persistence and timeseries
 
