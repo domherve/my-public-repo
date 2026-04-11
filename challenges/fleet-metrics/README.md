@@ -2,21 +2,21 @@
 
 A Go microservice that collects and reports statistics from edge devices: heartbeat events (for uptime tracking) and upload timing stats (for average upload time reporting).
 
-Built with Go 1.22 standard library only — no external dependencies.
+Built with Go 1.22 standard library only - no external dependencies.
 
 ---
 
 ## TL;DR
 
-Running the project in a dev environment (go 1.22+ installed) from this directory, using the sample device data provided.
+Running the project in a development environment (with Go 1.22+ installed) from this directory, using the sample device data provided:
 
 ```sh
 go run ./cmd/server --devices testdata/devices.csv
 ```
 
-Then run the device simulator.
+Then run the device simulator and check the results reported.
 
-More discussion about this submission can be found here, and more detailed build and run instructions can be found in this README below.
+More discussion about this submission can be found [here](submission/DISCUSSION.md), and more extensive build and run instructions can be found in this README down below.
 
 
 ---
