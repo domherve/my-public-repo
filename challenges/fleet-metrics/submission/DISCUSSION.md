@@ -31,7 +31,7 @@ The list of devices to monitor is preloaded from a csv file, and remaining stati
 
 ## Implementation Strategy
 
-Since I am new to Go, and this was a relatively simple and self-contained project, I decided to make extensive use of AI coding tools, mostly Claude Code. This was both as an experiment, and also as way to learn the idioms in Go (eg how to structure a standard project, write unit tests, make good use of the ideally standard libs, etc). This proved successful.
+Since I am new to Go, and this was a relatively simple and self-contained project, I decided to make extensive use of AI coding tools, mostly Claude Code. This was both as an experiment, and also as way to learn the idioms in Go (eg how to structure a standard project, write unit tests, make good use of the available libs, and properly use common patterns). This proved successful.
 
 I first used to the desktop application to present the problem, explain the requirements as I understood them and with my ideas on how to solve the problem and structure the solution at a high level. As such, I chose NOT to copy the instructions provided werbatim. After a few iterations, the AI and I converged on a plan, which resulted on a [prompt](./claude-code-prompt.md) that I could feed to Claude code (CLI).
 
